@@ -1,0 +1,23 @@
+{
+  "name": "mrc",
+  "version": "1.0.0",
+  "description": "more real cost - search flat easier on pages like olx and otodom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack -w"
+  },
+  "author": "Karol Suchecki",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "0.0.55",
+    "@types/jquery": "^3.2.16",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
