@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        vendor: ['jquery'],
+        vendor: ['jquery','babel-polyfill'],
         background: path.join(__dirname, 'src/background.ts'),
         content_script: path.join(__dirname, 'src/content_script.ts'),
     },
@@ -15,7 +15,7 @@ module.exports = {
         loaders: [{
             exclude: /node_modules/,
             test: /\.tsx?$/,
-            loader: 'ts-loader'
+            loader: 'babel-loader?presets[]=es2015!ts-loader'
         }]
     },
     resolve: {
