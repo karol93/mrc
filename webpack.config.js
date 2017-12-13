@@ -3,7 +3,9 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        vendor: ['jquery']
+        vendor: ['jquery'],
+        background: path.join(__dirname, 'src/background.ts'),
+        content_script: path.join(__dirname, 'src/content_script.ts'),
     },
     output: {
         path: path.join(__dirname, 'dist/js'),
