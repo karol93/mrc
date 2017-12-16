@@ -11,20 +11,22 @@
 <body>
   <form>
     <label>
-      <input type="number" required />
+      <input type="number" id="price-from"/>
       <div class="label-text">Cena od</div>
     </label>
     <label>
-      <input type="number" required />
+      <input type="number" id="price-to"/>
       <div class="label-text">Cena do</div>
     </label>
-    <input type="checkbox" id="box-1">
-    <label for="box-1">Wyróżnij wyfiltrowane</label>
+    <!-- <input type="checkbox" id="box-1">
+    <label for="box-1">Wyróżnij wyfiltrowane</label> -->
 
-    <input type="checkbox" id="box-2" checked>
-    <label for="box-2">Ukryj niepasujące</label>
-    <button class="btn draw meet">Zapisz</button>
+    <input type="checkbox" id="hide-not-matched">
+    <label for="hide-not-matched">Ukryj niepasujące</label>
+    <button class="btn draw meet" id="save">Zapisz</button>
   </form>
+
+  <script src="js/index.js"></script>
 </body>
 
 </html>

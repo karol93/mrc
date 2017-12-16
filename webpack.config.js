@@ -4,6 +4,7 @@ const path = require('path');
 module.exports = {
     entry: {
         vendor: ['jquery','babel-polyfill'],
+        index: path.join(__dirname,'src/index.ts'),
         background: path.join(__dirname, 'src/background.ts'),
         content_script: path.join(__dirname, 'src/content_script.ts'),
     },
