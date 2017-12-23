@@ -6,6 +6,27 @@ body {
     width:400px;
   }
   
+  .alert{
+    padding: 10px;
+    background: #f45e61;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+
+  .times{
+    cursor:pointer;
+    color: #a94244;
+    font-size: 25px;
+    position: absolute;
+    top: 4px;
+    left: 372px;
+  }
+
+  .times:hover{
+    transform: scale(1.2,1.2)
+  }
+
   form {
     margin: 10px;
     text-align: center;
@@ -163,6 +184,3 @@ body {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-
-
- 
