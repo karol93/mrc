@@ -9,20 +9,25 @@
 </head>
 
 <body>
-  <form>
+  <form novalidate>
     <label>
-      <input type="number" id="price-from"/>
+      <input type="number" required id="price-from"/>
       <div class="label-text">Cena od</div>
     </label>
     <label>
-      <input type="number" id="price-to"/>
+      <input type="number" required id="price-to"/>
       <div class="label-text">Cena do</div>
     </label>
-    <!-- <input type="checkbox" id="box-1">
-    <label for="box-1">Wyróżnij wyfiltrowane</label> -->
+
+    <input type="checkbox" id="active-filtring">
+    <label for="active-filtring">Aktywne filtrowanie</label>
 
     <input type="checkbox" id="hide-not-matched">
     <label for="hide-not-matched">Ukryj niepasujące</label>
+
+    <input type="checkbox" id="hide-from-outside">
+    <label for="hide-from-outside">Ukryj spoza serwisu</label>
+
     <button class="btn draw meet" id="save">Zapisz</button>
   </form>
 

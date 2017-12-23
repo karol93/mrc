@@ -1,11 +1,13 @@
+
 body {
     background-color: #333333;
     font-family: 'Open Sans', Helvetica;
     color: #9B9B9B;
+    width:400px;
   }
   
   form {
-    margin: 40px;
+    margin: 10px;
     text-align: center;
   }
   
@@ -125,7 +127,7 @@ body {
   input[type="checkbox"] + label {
     display: block;
     position: relative;
-    padding-left: 78px;
+    padding-left: 122px;
     text-align: left;
     margin-bottom: 20px;
     color: #ddd;
@@ -143,8 +145,8 @@ body {
     height: 20px;
     border: 1px solid #ff8a30;
     position: absolute;
-    left: 30px;
-    top: 32px;
+    left: 78px;
+    top: 26px;
     opacity: .6;
     -webkit-transition: all .12s, border-color .08s;
     transition: all .12s, border-color .08s;
@@ -152,8 +154,8 @@ body {
   
   input[type="checkbox"]:checked + label:before {
     width: 10px;
-    left: 35px;
-    top: 30px;
+    left: 83px;
+    top: 22px;
     border-radius: 0;
     opacity: 1;
     border-top-color: transparent;
