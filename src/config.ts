@@ -1,0 +1,1 @@
+export const AvailableHost = ["olx.pl","otodom.pl"];

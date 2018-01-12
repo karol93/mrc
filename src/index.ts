@@ -23,7 +23,8 @@ function saveFilters(e: any) {
 
 function loadFilters() {
     chrome.storage.sync.get(new Filters(), (filters: Filters) => {
-
+        $("#price-to").val(filters.priceTo)
+        $("#price-from").val(filters.priceFrom)
         $("#active-filtring").prop('checked', filters.activeFiltring);
         $("#hide-not-matched").prop('checked', filters.hideNotMatched);
         $("#hide-from-outside").prop('checked', filters.hideFromOutside);
