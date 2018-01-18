@@ -45,7 +45,7 @@ export class OtodomScraper implements IScraper {
                 row.parent().remove();
             }
             else {
-                priceCell.append('<div><strong style="color:#af3c3c;">OGŁOSZENIA SPOZA OLX</strong></div>');
+                priceCell.append('<div><strong style="color:#af3c3c;">OGŁOSZENIA SPOZA OTODOM</strong></div>');
             }
         }
     }

@@ -4,17 +4,15 @@ import { IScraper } from './scraper';
 import { Filters } from './filters';
 
 import 'babel-polyfill';
+import { ScraperFactory } from './scraper-factory';
 
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    let scraper: IScraper;
+  
     let hostname : string = msg.hostname;
     let filters : Filters = msg.filters;
 
-    if (hostname == "olx.pl")
-        scraper = new OlxScraper();
-    else if (hostname  == "otodom.pl")
-        scraper = new OtodomScraper();
+    let scraper: IScraper = ScraperFactory.createScraper(hostname);
 
     scraper.scrap(filters);
 
