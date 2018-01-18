@@ -3,8 +3,10 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        vendor: ['jquery','babel-polyfill'],
-        index: path.join(__dirname,'src/index.ts'),
+        vendor: ['jquery', 'babel-polyfill'],
+        utils: path.join(__dirname, 'src/utils.ts'),
+        filters: path.join(__dirname, 'src/filters.ts'),
+        index: path.join(__dirname, 'src/index.ts'),
         background: path.join(__dirname, 'src/background.ts'),
         content_script: path.join(__dirname, 'src/content_script.ts'),
     },
@@ -26,9 +28,10 @@ module.exports = {
 
         // pack common vender files
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor', 
+            names: ['vendor', 'utils','filters'],
             minChunks: Infinity
-        }),
+        })
+      
 
         // minify
         // new webpack.optimize.UglifyJsPlugin()
