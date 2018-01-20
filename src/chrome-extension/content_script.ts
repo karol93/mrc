@@ -1,10 +1,8 @@
-import { OtodomScraper } from './otodom-scraper';
-import { OlxScraper } from './olx-scraper';
-import { IScraper } from './scraper';
-import { Filters } from './filters';
+import { Filters } from './../shared/filters';
+import { ScraperFactory } from './../scraper/scraper-factory';
+import { IScraper } from '../scraper/scraper';
 
 import 'babel-polyfill';
-import { ScraperFactory } from './scraper-factory';
 
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {

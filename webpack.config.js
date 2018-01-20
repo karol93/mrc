@@ -1,11 +1,12 @@
 const webpack = require("webpack");
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: path.join(__dirname, 'src/index.ts'),
-        background: path.join(__dirname, 'src/background.ts'),
-        content_script: path.join(__dirname, 'src/content_script.ts'),
+        index: path.join(__dirname, 'src/chrome-extension/index.ts'),
+        background: path.join(__dirname, 'src/chrome-extension/background.ts'),
+        content_script: path.join(__dirname, 'src/chrome-extension/content_script.ts'),
         vendor: ['jquery', 'babel-polyfill'],    
     },
     output: {
@@ -29,7 +30,11 @@ module.exports = {
             names: ['common','vendor'],
             minChunks: 2
         }),
-
+        new CopyWebpackPlugin([
+            {from: 'src/manifest.json', to: "../"},
+            {from: 'src/chrome-extension/index.html', to: "../"},
+            {from: 'src/chrome-extension/styles.css', to: "../"}
+        ]),
 
         // minify
         // new webpack.optimize.UglifyJsPlugin()

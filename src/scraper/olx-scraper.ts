@@ -1,8 +1,8 @@
-import { Filters } from './filters';
-import { Utils } from './utils';
-import { IScraper } from "./scraper";
-
 import * as $ from 'jquery';
+
+import { Filters } from './../shared/filters';
+import { IScraper } from './scraper';
+import { Utils } from '../shared/utils';
 
 export class OlxScraper implements IScraper {
 

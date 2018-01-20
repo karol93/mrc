@@ -1,5 +1,5 @@
-import { Filters } from './filters';
 import * as $ from 'jquery';
+import { Filters } from '../shared/filters';
 
 $('#save').click(saveFilters);
 

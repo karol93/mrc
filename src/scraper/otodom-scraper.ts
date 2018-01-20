@@ -1,8 +1,8 @@
-import { Filters } from './filters';
-import { Utils } from './utils';
+import * as $ from 'jquery';
+import { Filters } from './../shared/filters';
+import { Utils } from '../shared/utils';
 import { IScraper } from './scraper';
 
-import * as $ from 'jquery';
 
 export class OtodomScraper implements IScraper {
 

@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+  
+    "name": "mrc",
+    "description": "more real cost - search flat easier on pages like olx and otodom",
+    "version": "1.0",
+  
+  
+    "browser_action": {
+     // "default_icon": "icon.png",
+      "default_popup": "index.html"
+    },
+  
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/vendor.js", "js/common.js", "js/content_script.js"]
+        }
+    ],
+  
+    "background": {
+      "scripts": ["js/vendor.js", "js/common.js", "js/background.js"]
+    },
+  
+    "permissions": [
+      "storage",
+      "<all_urls>"
+    ]
+  }

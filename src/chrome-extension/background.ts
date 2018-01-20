@@ -1,9 +1,6 @@
-import { IScraper } from './scraper';
-import { Utils } from "./utils";
-import { Filters } from "./filters";
-import { AvailableHost } from './config';
-import { OlxScraper } from './olx-scraper';
-import { OtodomScraper } from './otodom-scraper';
+import { Filters } from './../shared/filters';
+import { AvailableHost } from './../config/config';
+import { Utils } from "../shared/utils";
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (changeInfo.status == 'complete' && tab.active) {
