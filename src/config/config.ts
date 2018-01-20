@@ -1,1 +1,4 @@
-export const AvailableHost = ["olx.pl","otodom.pl"];
+export const AvailableEndpoints = [
+    "olx.pl/nieruchomosci/mieszkania/wynajem/",
+    "otodom.pl/wynajem/mieszkanie/"
+];
