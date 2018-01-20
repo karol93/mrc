@@ -25,8 +25,8 @@ export class OtodomScraper implements IScraper {
                     const additionalPrice = $(data).find("strong:contains('Czynsz - dodatkowo:')").parent().contents().eq(1).text().replace('zł', '').replace(' ', '');
                     if (!$.isNumeric(additionalPrice)) {
                         priceCell.append('<div>brak informacji o czynszu</div>');
-                        return;
-                    }
+                        continue; 
+                    } 
 
                     const originalPrice = $(data).find('ul.main-list li:eq(0)').find('span').text().replace('zł', '').replace(' ', '');
                     const sumPrice = Number(originalPrice) + Number(additionalPrice);
