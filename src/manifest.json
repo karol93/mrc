@@ -1,29 +1,41 @@
 {
-    "manifest_version": 2,
-  
-    "name": "mrc",
-    "description": "more real cost - search flat easier on pages like olx and otodom",
-    "version": "1.0",
-  
-  
-    "browser_action": {
-     // "default_icon": "icon.png",
-      "default_popup": "index.html"
+  "manifest_version": 2,
+  "name": "mrc",
+  "description": "more real cost - search flat easier on pages like olx and otodom",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
     },
-  
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["js/vendor.js", "js/common.js", "js/content_script.js"]
-        }
-    ],
-  
-    "background": {
-      "scripts": ["js/vendor.js", "js/common.js", "js/background.js"]
-    },
-  
-    "permissions": [
-      "storage",
-      "<all_urls>"
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/vendor.js",
+        "js/common.js",
+        "js/content_script.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/vendor.js",
+      "js/common.js",
+      "js/background.js"
     ]
-  }
+  },
+  "permissions": [
+    "storage",
+    "<all_urls>"
+  ]
+}

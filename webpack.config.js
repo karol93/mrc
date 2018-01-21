@@ -33,7 +33,8 @@ module.exports = {
         new CopyWebpackPlugin([
             {from: 'src/manifest.json', to: "../"},
             {from: 'src/chrome-extension/index.html', to: "../"},
-            {from: 'src/chrome-extension/styles.css', to: "../"}
+            {from: 'src/chrome-extension/styles.css', to: "../"},
+            {from: 'src/images', to :  "../images"}
         ]),
 
         // minify
