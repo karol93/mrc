@@ -37,6 +37,6 @@ module.exports = {
         ]),
 
         // minify
-        // new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin()
     ]
 };
